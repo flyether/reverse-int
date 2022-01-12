@@ -1,9 +1,8 @@
-module.exports = function reverse (n) {
-    let result = 0;
-    while (n) {
-      result = result * 10 + n % 10;
-      n = Math.floor(n / 10);
+module.exports = function reverse(n) {
+  let count = Math.abs(n);
+  count = count.toString();
+  count =  count.split('').reverse().join('');
+  count = Number(count);
+    return count;
 }
-return result;
-}
-console.log(reverse(45677));
+
